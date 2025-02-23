@@ -36,11 +36,31 @@ function VideoSection() {
 
   const [activeVideo, setActiveVideo] = useState(0)
   const videoRef = useRef(null)
+  const observerRef = useRef(null)
 
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && videoRef.current) {
+            videoRef.current.load() // Load video when it becomes visible
+            videoRef.current.play()
+          }
+        })
+      },
+      { threshold: 0.5 } // Load when 50% visible
+    )
+
     if (videoRef.current) {
-      videoRef.current.load()
-      videoRef.current.play()
+      observer.observe(videoRef.current)
+    }
+
+    observerRef.current = observer
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect()
+      }
     }
   }, [activeVideo])
 
@@ -51,20 +71,16 @@ function VideoSection() {
         
         <div className="video-content">
           <div className="video-player">
-            {videos[activeVideo].type === "mp4" ? (
-              <video ref={videoRef} autoPlay loop muted playsInline className="video-element">
-                <source src={videos[activeVideo].url} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            ) : (
-              <iframe
-                src={`${videos[activeVideo].url}?autoplay=1&loop=1&playlist=${videos[activeVideo].url}`} 
-                title={videos[activeVideo].title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            )}
+            <video
+              ref={videoRef}
+              className="video-element"
+              playsInline
+              muted
+              loop
+            >
+              <source src={videos[activeVideo].url} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
 
           <div className="video-playlist">
