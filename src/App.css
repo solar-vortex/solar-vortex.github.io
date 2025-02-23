@@ -565,3 +565,12 @@ iframe:hover {
   }
 }
 
+@media (max-width: 768px) {
+  .video-element,
+  iframe {
+    /* Remove the fixed height */
+    height: auto;
+    /* Maintain a 16:9 ratio */
+    aspect-ratio: 16 / 9;
+  }
+}
