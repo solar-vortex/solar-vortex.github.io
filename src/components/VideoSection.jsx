@@ -8,67 +8,33 @@ import photorealistic3DVideo from "../assets/2023-10-2922-21-37-Ezgif.Com-Video-
 
 function VideoSection() {
   const videos = [
-    {
-      id: 1,
-      title: "Heatmap Visualization of Ahmedabad City",
-      url: heatmapVideo,
-      type: "mp4",
-    },
-    {
-      id: 2,
-      title: "Calculating the BIPV Potential of a Building",
-      url: bipvVideo,
-      type: "mp4",
-    },
-    {
-      id: 3,
-      title: "Visualizing the Solar Panels on the roof of a Building",
-      url: solarRoofVideo,
-      type: "mp4",
-    },
-    {
-      id: 4,
-      title: "Visualizing the Solar Panels on the roof of a Building Using Photorealistic 3-D Tiles",
-      url: photorealistic3DVideo,
-      type: "mp4",
-    },
+    { id: 1, title: "Heatmap Visualization of Ahmedabad City", url: heatmapVideo },
+    { id: 2, title: "Calculating the BIPV Potential of a Building", url: bipvVideo },
+    { id: 3, title: "Solar Panels on the Roof of a Building", url: solarRoofVideo },
+    { id: 4, title: "Photorealistic 3D Tiles with Solar Panels", url: photorealistic3DVideo },
   ]
 
   const [activeVideo, setActiveVideo] = useState(0)
   const videoRef = useRef(null)
-  const observerRef = useRef(null)
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && videoRef.current) {
-            videoRef.current.load() // Load video when it becomes visible
-            videoRef.current.play()
-          }
-        })
-      },
-      { threshold: 0.5 } // Load when 50% visible
-    )
-
     if (videoRef.current) {
-      observer.observe(videoRef.current)
+      videoRef.current.load() // Start loading immediately
+      videoRef.current.play().catch(() => console.warn("Autoplay blocked"))
     }
 
-    observerRef.current = observer
-
-    return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect()
-      }
-    }
+    // Preload the next video
+    const nextVideoIndex = (activeVideo + 1) % videos.length
+    const preloadedVideo = document.createElement("video")
+    preloadedVideo.src = videos[nextVideoIndex].url
+    preloadedVideo.preload = "auto"
   }, [activeVideo])
 
   return (
     <section className="video-section">
       <div className="video-container">
         <h2 className="video-section-title">Demo of Different Features Provided By the Project</h2>
-        
+
         <div className="video-content">
           <div className="video-player">
             <video
@@ -77,6 +43,8 @@ function VideoSection() {
               playsInline
               muted
               loop
+              autoPlay
+              preload="auto" // Forces video to load early
             >
               <source src={videos[activeVideo].url} type="video/mp4" />
               Your browser does not support the video tag.
