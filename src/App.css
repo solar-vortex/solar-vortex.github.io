@@ -317,6 +317,13 @@ body {
   z-index: -1;
 }
 
+.overlay-card-link {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Keeps the text color unchanged */
+  display: block; /* Makes sure the whole card is clickable */
+}
+
+
 /* Video Section styles */
 .video-section {
   width: 100%;
