@@ -1,13 +1,13 @@
-:root {
+/* :root {
   --color-background: #ffffff;
   --color-foreground: #0a0a0a;
   --color-primary: #ffd700;
   --color-primary-dark: #b39700;
   --color-muted: #666666;
   --color-border: #e5e5e5;
-}
+} */
 
-/* Dark theme
+/* Dark theme */
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: #0a0a0a;
@@ -17,7 +17,7 @@
     --color-muted: #a3a3a3;
     --color-border: #262626;
   }
-} */
+}
 
 /* Reset */
 * {
