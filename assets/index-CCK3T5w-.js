@@ -52,9 +52,10 @@ Error generating stack: `+a.message+`
           padding: 10px;
           font-size: 16px;
           font-weight: bold;
-          position: fixed;
+          // position: fixed;
           width: 100%;
           bottom: 0;
+          margin-top:20px;
           color: white;
         }
       `})]})}function Gh(){return z.jsxs("div",{className:"App",children:[z.jsx(Mh,{}),z.jsx(Rh,{}),z.jsx(Hh,{}),z.jsx(Bh,{}),z.jsx(xh,{})]})}_h.createRoot(document.getElementById("root")).render(z.jsx(xn.StrictMode,{children:z.jsx(Gh,{})}));
