@@ -57,9 +57,10 @@ function AboutUs() {
           padding: 10px;
           font-size: 16px;
           font-weight: bold;
-          position: fixed;
+          // position: fixed;
           width: 100%;
           bottom: 0;
+          margin-top:20px;
           color: white;
         }
       `}</style>
