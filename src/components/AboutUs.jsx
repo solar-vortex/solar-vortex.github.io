@@ -10,7 +10,6 @@ function AboutUs() {
 
         <div className="team">
           <div className="team-member">
-            {/* <img src="/profile1.jpg" alt="Developer 1" className="team-photo" /> */}
             <h3 className="team-name">Atharva Garole</h3>
             <div className="social-links">
               <a href="https://github.com/GaroleAtharva" target="_blank" className="social-link">
@@ -23,7 +22,6 @@ function AboutUs() {
           </div>
 
           <div className="team-member">
-            {/* <img src="/profile2.jpg" alt="Developer 2" className="team-photo" /> */}
             <h3 className="team-name">Sagar Singh</h3>
             <div className="social-links">
               <a href="https://github.com/Sagar9955" target="_blank" className="social-link">
@@ -33,11 +31,9 @@ function AboutUs() {
                 <i className="fab fa-linkedin"></i> LinkedIn
               </a>
             </div>
-
-            
           </div>
+
           <div className="team-member">
-            {/* <img src="/profile2.jpg" alt="Developer 2" className="team-photo" /> */}
             <h3 className="team-name">Prathmesh Badgujar</h3>
             <div className="social-links">
               <a href="https://github.com/pbword" target="_blank" className="social-link">
@@ -47,9 +43,26 @@ function AboutUs() {
                 <i className="fab fa-linkedin"></i> LinkedIn
               </a>
             </div>
+          </div>
         </div>
       </div>
-      </div>
+      
+      <footer className="footer">
+        <p>&copy; 2025 SolarVortex</p>
+      </footer>
+
+      <style>{`
+        .footer {
+          text-align: center;
+          padding: 10px;
+          font-size: 16px;
+          font-weight: bold;
+          position: fixed;
+          width: 100%;
+          bottom: 0;
+          color: white;
+        }
+      `}</style>
     </section>
   );
 }
