@@ -127,24 +127,31 @@ body {
 }
 
 /* Hero styles */
-/* .hero {
+.hero {
+  margin-top: 90px; /* Adjust based on your navbar height */
   position: relative;
   min-height: 80vh;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   overflow: hidden;
-} */
+}
+
 
 .hero-background {
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9)),
-  url("../assets/image2.jpg"); /* Updated to relative import */
-  background-size: cover;
+    url("../assets/image2.jpg");
+  background-size: 90% ; /* Stretch both width & height */
   background-position: center;
-  filter: brightness(0.9); /* Slightly increase overall brightness */
+  filter: brightness(0.9);
+  background-size: cover;
+background-position: center center;
+
 }
+
+
 
 
 .hero-content {
