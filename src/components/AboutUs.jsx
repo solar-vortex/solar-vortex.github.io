@@ -34,7 +34,7 @@ function AboutUs() {
           </div>
 
           <div className="team-member">
-            <h3 className="team-name">Prathmesh Badgujar</h3>
+            <h3 className="team-name">Prathamesh Badgujar</h3>
             <div className="social-links">
               <a href="https://github.com/pbword" target="_blank" className="social-link">
                 <i className="fab fa-github"></i> GitHub
