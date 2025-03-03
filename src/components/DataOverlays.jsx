@@ -1,6 +1,8 @@
 "use client"
 
 import overlay1 from "../assets/overlay1.png"
+import overlay2 from "../assets/overlay2.gif"
+import overlay3 from "../assets/bipv.gif"
 
 function DataOverlays() {
   const overlayData = [
@@ -10,18 +12,14 @@ function DataOverlays() {
       link: "https://solar-vortex.github.io/blog/post/customshaders/", // Add the link here
     },
     {
-      title: "Monthly Flux",
-      description: "Monthly amount of solar energy. Drill down to specific month.",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20from%202025-02-12%2013-38-57-iYNyL9Dzy4TNLLyNITj3RxKKfCaiDm.png",
-      link: "/blogs/monthly-flux",
+      title: "3D Solar Rooftop Mapping with Google 3D Tiles, Deck.gl, and Three.js",
+      image:overlay2,
+      link: "https://solar-vortex.github.io/blog/post/blog3/",
     },
     {
-      title: "Hourly Shade",
-      description: "Hourly shade cover. Drill down to specific hour of the day on any day.",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20from%202025-02-12%2013-39-15-DfMDLYwJDXYwoVYrvPr9TpyHwg2iIH.png",
-      link: "/blogs/hourly-shade",
+      title: "Calculating BIPV Potential Using GHI, DNI, and Other Solar Parameters",
+      image:overlay3,
+      link: "https://solar-vortex.github.io/blog/post/blog3/",
     },
   ]
 
