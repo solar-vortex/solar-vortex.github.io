@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import heatmapVideo from "../assets/Heatmap.mp4"
 import bipvVideo from "../assets/BIPV.mp4"
 import solarRoofVideo from "../assets/2023-10-2921-57-25-Ezgif.Com-Video-Speed.mp4"
-import photorealistic3DVideo from "../assets/2023-10-2922-21-37-Ezgif.Com-Video-Speed.mp4"
+import photorealistic3DVideo from "../assets/3dtiles.mp4"
 
 function VideoSection() {
   const videos = [
