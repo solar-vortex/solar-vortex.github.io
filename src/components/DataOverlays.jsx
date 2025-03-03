@@ -14,7 +14,7 @@ function DataOverlays() {
     {
       title: "3D Solar Rooftop Mapping with Google 3D Tiles, Deck.gl, and Three.js",
       image:overlay2,
-      link: "https://solar-vortex.github.io/blog/post/blog3/",
+      link: "https://solar-vortex.github.io/blog/post/blog2/",
     },
     {
       title: "Calculating BIPV Potential Using GHI, DNI, and Other Solar Parameters",
