@@ -8,10 +8,11 @@ import photorealistic3DVideo from "../assets/3dtiles.mp4"
 
 function VideoSection() {
   const videos = [
-    { id: 1, title: "Heatmap Visualization of Ahmedabad City", url: heatmapVideo },
-    { id: 2, title: "Calculating the BIPV Potential of a Building", url: bipvVideo },
-    { id: 3, title: "Solar Panels on the Roof of a Building", url: solarRoofVideo },
-    { id: 4, title: "Photorealistic 3D Tiles with Solar Panels", url: photorealistic3DVideo },
+    { id: 1, title: "Photorealistic 3D Tiles with Solar Panels", url: photorealistic3DVideo },
+    { id: 2, title: "Solar Panels on the Roof of a Building", url: solarRoofVideo },
+    { id: 3, title: "Heatmap Visualization of A City", url: heatmapVideo },
+    { id: 4, title: "Calculating the BIPV Potential of a Building", url: bipvVideo },
+    
   ]
 
   const [activeVideo, setActiveVideo] = useState(0)
