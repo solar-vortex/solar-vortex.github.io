@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://solar-vortex.github.io/sitemap.xml
