@@ -1,6 +1,13 @@
 import logo from "../assets/logo.png"; // Import the logo
 
 function Navbar() {
+   // Function to scroll to the About Us section
+   const scrollToAboutUs = () => {
+    const aboutSection = document.getElementById("about-us-section");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -14,8 +21,8 @@ function Navbar() {
           <a href="https://solar-vortex.github.io/blog/" className="nav-button">
             Blog
           </a>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=solarvortex589@gmail.com" target="_blank" className="nav-button">
-            Contact Us
+          <a className="nav-button" onClick={scrollToAboutUs}>
+            Contact
           </a>
         </div>
       </div>

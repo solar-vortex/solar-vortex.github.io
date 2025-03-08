@@ -1,5 +1,6 @@
 function AboutUs() {
   return (
+    <div id="about-us-section">
     <section className="about-us">
       <div className="about-container">
         <h2 className="about-title">About Us</h2>
@@ -50,6 +51,7 @@ function AboutUs() {
       <footer className="footer">
         <p>&copy; 2025 SolarVortex</p>
       </footer>
+      
 
       <style>{`
         .footer {
@@ -65,6 +67,7 @@ function AboutUs() {
         }
       `}</style>
     </section>
+    </div>
   );
 }
 
