@@ -8,7 +8,7 @@ function Hero() {
 
       {/* Background image remains unchanged */}
       <div
-        className="hero-background"
+        className="hero-background" fetchpriority="high" rel="preload"
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9)), url(${image2})`,
         }}
