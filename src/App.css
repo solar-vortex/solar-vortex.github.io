@@ -169,7 +169,7 @@ background-position: center center;
   z-index: 10;
   text-align: center;
   padding: 2rem;
-  /* max-width: 1200px; */
+  max-width: 1200px;
   margin: 0 auto;
 }
 
