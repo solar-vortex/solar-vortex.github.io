@@ -50,10 +50,10 @@ body {
   background-color: rgba(var(--color-background), 0.95);
   backdrop-filter: blur(8px);
   height: 50px; /* Reduce height */
-  padding: 0.5rem 1rem; /* Reduce padding */
+  padding: 0.5rem 1rem; /*Reduce padding */
   display: flex;
   align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+  justify-content: space-between; /* Center horizontally */
 }
 
 .navbar-container {
@@ -62,7 +62,7 @@ body {
   align-items: center;
   justify-content: space-between;
   /* padding: 1rem; */
-  padding: 0.5rem 1rem; /* Reduce padding */
+  /* padding: 0.5rem 1rem; Reduce padding */
 }
 
 .navbar-left {
@@ -169,7 +169,7 @@ background-position: center center;
   z-index: 10;
   text-align: center;
   padding: 2rem;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
 }
 
