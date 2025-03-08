@@ -49,17 +49,26 @@ body {
   border-bottom: 1px solid var(--color-border);
   background-color: rgba(var(--color-background), 0.95);
   backdrop-filter: blur(8px);
+  height: 50px; /* Reduce height */
+  padding: 0.5rem 1rem; /* Reduce padding */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
 }
 
 .navbar-container {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   /* padding: 1rem; */
+  padding: 0.5rem 1rem; /* Reduce padding */
 }
 
 .navbar-left {
-  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .navbar-right {
@@ -81,22 +90,22 @@ body {
 }
 
 .logo {
-  width: 4rem;
-  height: 3.5rem;
+  width: 3rem;
+  height: 2.5rem;
   /* background-color: var(--color-primary); */
   border-radius: 4px;
-  margin-left: 0;
+  margin-right: 0.5rem;
 }
 
 .logo-text {
   font-weight: 1200;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .nav-link {
   color: var(--color-foreground);
   text-decoration: none;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 
 .nav-link:hover {
@@ -104,8 +113,8 @@ body {
 }
 
 .nav-button {
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.875rem;
   font-weight: 500;
   color: #d1c4e9; /* Soft purple text */
   background: #1a1a2e; /* Darker background for subtlety */
@@ -144,7 +153,7 @@ body {
   inset: 0;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9)),
     url("../assets/image2.jpg");
-  background-size: 90% ; /* Stretch both width & height */
+  background-size: 100% ; /* Stretch both width & height */
   background-position: center;
   filter: brightness(0.9);
   background-size: cover;
@@ -172,6 +181,7 @@ background-position: center center;
   justify-content: center;
   overflow: hidden;
   padding-bottom: -1rem; /* Adds space at the bottom */
+  margin-top: 50px;
 }
 
 .hero-title {
