@@ -7,7 +7,7 @@
     "dev": "vite",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "build": "vite build && cp assets/robots.txt dist/ && cp assets/sitemap.xml dist/",
+    "build": "vite build && cp src/assets/robots.txt dist/ && cp src/assets/sitemap.xml dist/",
     "lint": "eslint .",
     "preview": "vite preview"
   },
