@@ -44,7 +44,6 @@ body {
 }
 
 .navbar-container {
-  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 1rem;
   display: flex;
@@ -301,13 +300,14 @@ body {
 .video-item-description {
   font-size: 0.875rem;
   color: var(--color-muted);
+
 }
 
 .video-item:hover .video-item-title,
 .video-item:hover .video-item-description,
 .video-item.active .video-item-title,
 .video-item.active .video-item-description {
-  color: var(--color-background);
+  color: white;
 }
 
 /* Responsive styles for video section */

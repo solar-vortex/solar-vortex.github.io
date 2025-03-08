@@ -473,7 +473,7 @@ iframe:hover {
 .video-item:hover .video-item-description,
 .video-item.active .video-item-title,
 .video-item.active .video-item-description {
-  color: var(--color-background);
+  color: white;
 }
 
 /*About Us Section*/
